@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="hi" data-bs-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shubh Deepawali 🪔</title>
+<meta name="description" content="Shubh Deepawali — ek chhota sa Diwali tohfa aapke liye 🪔">
+<meta name="theme-color" content="#080319">
+<!-- WHATSAPP PREVIEW: GitHub Pages link banne ke baad niche USERNAME aur REPO apne se badal do (2 jagah) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="🪔 Tumhare liye ek chhota sa surprise ❤️">
+<meta property="og:description" content="Link kholo, diya jalao aur dekho…">
+<meta property="og:url" content="https://USERNAME.github.io/REPO/">
+<meta property="og:image" content="https://USERNAME.github.io/REPO/images/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Great+Vibes&family=Poppins:wght@300;400;500;600&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link href="vendor/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body class="lock">
+
+<!-- ======= shared SVG art (gradients + symbols) ======= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gDiya" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffa04d"/><stop offset=".5" stop-color="#d4501a"/><stop offset="1" stop-color="#6e1f0d"/>
+    </linearGradient>
+    <radialGradient id="gLantern" cx=".5" cy=".5" r=".62">
+      <stop offset="0" stop-color="#fff0b0"/><stop offset=".55" stop-color="#ffa81f"/><stop offset="1" stop-color="#d9531a"/>
+    </radialGradient>
+    <symbol id="s-diya" viewBox="0 0 100 56">
+      <path d="M3 14Q50 3 97 14Q93 50 50 54Q7 50 3 14Z" fill="url(#gDiya)" stroke="#ffd873" stroke-width="2"/>
+      <ellipse cx="50" cy="14" rx="46" ry="7" fill="#5a1d0b"/>
+      <ellipse cx="50" cy="14" rx="40" ry="4.6" fill="#ffb347" opacity=".55"/>
+      <path d="M18 28Q50 41 82 28" fill="none" stroke="#ffd873" stroke-width="1.6"/>
+      <circle cx="30" cy="38" r="2.2" fill="#ffd873"/><circle cx="50" cy="44" r="2.2" fill="#ffd873"/><circle cx="70" cy="38" r="2.2" fill="#ffd873"/>
+      <path d="M48 13Q50 6 52 13" stroke="#24090a" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="s-lantern" viewBox="0 0 78 190">
+      <line x1="39" y1="0" x2="39" y2="40" stroke="#ffd873" stroke-width="2"/>
+      <path d="M26 40h26l6 12H20z" fill="#d98a1c"/>
+      <path d="M20 52h38c10 20 10 52 0 76H20c-10-24-10-56 0-76z" fill="url(#gLantern)" stroke="#ffd873" stroke-width="2"/>
+      <path d="M39 52v76M29 52c-8 24-8 52 0 76M49 52c8 24 8 52 0 76" stroke="#b8561a" stroke-width="1.4" fill="none"/>
+      <ellipse cx="39" cy="92" rx="8" ry="14" fill="#fff6c9"/>
+      <path d="M22 128h34l-6 10H28z" fill="#d98a1c"/>
+      <line x1="39" y1="138" x2="39" y2="162" stroke="#ffd873" stroke-width="2"/>
+      <path d="M33 162h12l-3 24h-6z" fill="#ff3d3d"/>
+    </symbol>
+    <symbol id="s-corner" viewBox="0 0 64 64">
+      <path d="M3 61V20C3 10 10 3 20 3H61" fill="none" stroke="currentColor" stroke-width="3"/>
+      <path d="M11 61V26C11 17.5 17.5 11 26 11H61" fill="none" stroke="currentColor" stroke-width="1" opacity=".7"/>
+      <circle cx="20" cy="20" r="5" fill="currentColor"/>
+      <circle cx="20" cy="20" r="9.5" fill="none" stroke="currentColor" stroke-width="1"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ======= INTRO (tap = diya jalao) ======= -->
+<div id="intro">
+  <div class="intro-stars"></div>
+  <div class="intro-inner text-center">
+    <p class="eyebrow mb-2">✦ Deepawali 2026 ✦</p>
+    <button id="enter" class="intro-diya" aria-label="Diya jalao">
+      <span class="intro-halo"></span>
+      <span class="diya intro-d"><span class="flame"></span><svg viewBox="0 0 100 56"><use href="#s-diya"/></svg></span>
+    </button>
+    <h2 class="hindi-title intro-title mt-3" id="introTitle">शुभ दीपावली</h2>
+    <p class="script intro-sub" id="introSub">Meri jaan, tumhare liye ek chhota sa tohfa</p>
+    <p class="tap-hint" id="tapHint">🪔 Diya jalane ke liye tap karein</p>
+  </div>
+</div>
+
+<!-- ======= BACKGROUND LAYERS ======= -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-img"></div>
+  <div class="bg-ghost" id="ghostA"></div>
+  <div class="bg-ghost" id="ghostB"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-shade"></div>
+  <div id="stars"></div>
+</div>
+<canvas id="fw" aria-hidden="true"></canvas>
+<div id="petals" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ======= NAVBAR ======= -->
+<nav class="navbar navbar-expand-md fixed-top" id="nav">
+  <div class="container">
+    <a class="navbar-brand brand" href="#home">🪔 <span>Deepawali</span></a>
+    <div class="d-flex align-items-center gap-2 order-md-3">
+      <button class="icon-btn" id="bMute" title="Sound on/off" aria-label="Sound">🔊</button>
+      <button class="icon-btn" data-bs-toggle="offcanvas" data-bs-target="#music" title="Music" aria-label="Music">🎵</button>
+      <button class="navbar-toggler icon-btn border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
+    </div>
+    <div class="collapse navbar-collapse order-md-2" id="menu">
+      <ul class="navbar-nav mx-md-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#diyas">Diya Jalao</a></li>
+        <li class="nav-item"><a class="nav-link" href="#wishes">Shubhkamnayein</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ======= HERO ======= -->
+<section id="home" class="hero">
+  <svg class="toran" id="toran" aria-hidden="true"></svg>
+  <div class="lantern l1" aria-hidden="true"><svg viewBox="0 0 78 190"><use href="#s-lantern"/></svg></div>
+  <div class="lantern l2" aria-hidden="true"><svg viewBox="0 0 78 190"><use href="#s-lantern"/></svg></div>
+  <div class="lantern l3" aria-hidden="true"><svg viewBox="0 0 78 190"><use href="#s-lantern"/></svg></div>
+  <div class="lantern l4" aria-hidden="true"><svg viewBox="0 0 78 190"><use href="#s-lantern"/></svg></div>
+
+  <div class="container hero-content">
+    <div class="row align-items-center g-4 g-lg-5">
+      <!-- text -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <p class="eyebrow">✦ Deepawali 2026 ✦</p>
+        <h1 class="hindi-title" id="title">शुभ दीपावली</h1>
+        <h2 class="script" id="subtitle">Happy Diwali</h2>
+        <p class="typed"><span id="typed"></span><span class="caret">|</span></p>
+        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mt-3">
+          <button class="btn btn-diwali" id="bPlay">⏸ Slideshow</button>
+          <button class="btn btn-glass" id="bFw">🎆 Fireworks: ON</button>
+          <a class="btn btn-glass" href="#gallery">🖼️ Gallery</a>
+          <button class="btn btn-glass d-none d-md-inline-block" id="bFs">⛶ Full screen</button>
+        </div>
+        <div class="thumbs d-none d-md-flex" id="thumbs" aria-label="Photos"></div>
+      </div>
+
+      <!-- photo stage -->
+      <div class="col-lg-6 d-flex justify-content-center">
+        <div class="stage" id="stage">
+          <div class="frame">
+            <div class="frame-inner">
+              <div class="layer" id="LA"></div>
+              <div class="layer" id="LB"></div>
+              <div class="shine"></div>
+              <span class="count" id="count">1 / 16</span>
+              <button class="nav-btn prev" id="prev" aria-label="Previous">‹</button>
+              <button class="nav-btn next" id="next" aria-label="Next">›</button>
+              <div class="cap" id="cap"></div>
+              <div class="progress-x"><i id="progress"></i></div>
+            </div>
+          </div>
+          <svg class="corner tl"><use href="#s-corner"/></svg>
+          <svg class="corner tr"><use href="#s-corner"/></svg>
+          <svg class="corner bl"><use href="#s-corner"/></svg>
+          <svg class="corner br"><use href="#s-corner"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#gallery" class="scroll-hint" aria-label="Scroll">⌄</a>
+</section>
+
+<!-- ======= GALLERY ======= -->
+<section id="gallery" class="section">
+  <div class="container">
+    <div class="section-head text-center reveal">
+      <p class="eyebrow">✦ Yaadon ki Rangoli ✦</p>
+      <h2 class="hindi-h">Yaadgaar Palon ki Jhalak</h2>
+      <p class="muted">Kisi bhi photo par tap karo — bada dekhne ke liye</p>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 g-lg-4" id="grid"></div>
+  </div>
+</section>
+
+<!-- ======= DIYA JALAO ======= -->
+<section id="diyas" class="section">
+  <div class="container text-center">
+    <div class="section-head reveal">
+      <p class="eyebrow">✦ Ek Khel ✦</p>
+      <h2 class="hindi-h">Ek-ek karke saare diye jalao 🪔</h2>
+      <p class="muted">Saare diye jalte hi aasmaan roshan ho jayega…</p>
+    </div>
+    <div class="glass diya-board reveal">
+      <div class="diya-row" id="diyaRow"></div>
+      <p class="diya-msg" id="diyaMsg">0 / 11 diye jale</p>
+      <button class="btn btn-glass btn-sm" id="diyaReset" hidden>🔄 Dobara jalao</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======= WISHES ======= -->
+<section id="wishes" class="section">
+  <div class="container">
+    <div class="section-head text-center reveal">
+      <p class="eyebrow">✦ Dil se ✦</p>
+      <h2 class="hindi-h">Diwali ki Shubhkamnayein</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col reveal"><div class="card wish h-100"><div class="card-body text-center p-4">
+        <div class="wish-ico">🪔</div><h3 class="wish-t">Roshni</h3>
+        <p>Jaise ek diya poore ghar ko roshan kar deta hai, waise hi tumne meri zindagi ko roshan kiya hai. Tumhari muskaan meri sabse badi roshni hai.</p>
+      </div></div></div>
+      <div class="col reveal"><div class="card wish h-100"><div class="card-body text-center p-4">
+        <div class="wish-ico">🙏</div><h3 class="wish-t">Samriddhi</h3>
+        <p>Maa Laxmi tumhe sukh, sehat aur samriddhi dein. Tumhare har sapne poore hon aur har din tumhare liye shubh ho.</p>
+      </div></div></div>
+      <div class="col reveal"><div class="card wish h-100"><div class="card-body text-center p-4">
+        <div class="wish-ico">❤️</div><h3 class="wish-t">Pyaar</h3>
+        <p>Mithai ki meethas aur pataakhon ki chamak se bhi zyada keemti tumhara saath hai. Tum ho, to har din tyohaar hai. Happy Diwali, meri jaan ❤️</p>
+      </div></div></div>
+    </div>
+    <p class="text-center signoff reveal" id="signoff">— Hamesha tumhara, pyaar ke saath ❤️</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-diyas" id="footDiyas" aria-hidden="true"></div>
+  <p class="script foot-t">Happy Diwali ✨</p>
+  <div class="d-flex flex-wrap gap-2 justify-content-center mb-3">
+    <button class="btn btn-diwali" id="bShare">📤 Share karein</button>
+    <button class="btn btn-glass" id="bReplay">🎆 Fireworks dobara</button>
+  </div>
+  <small class="muted">Made with ❤️ &amp; ✨ roshni</small>
+</footer>
+
+<!-- ======= MUSIC (Bootstrap offcanvas) ======= -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="music">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">🎵 Music Player</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="np glass p-3 mb-3 text-center">
+      <div class="np-ico" id="npIco">🎶</div>
+      <div class="np-t" id="npTitle">Tap ▶ to play</div>
+      <input type="range" class="form-range my-2" id="seek" min="0" max="1000" value="0" disabled>
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <button class="icon-btn" id="mPrev" aria-label="Prev">⏮</button>
+        <button class="icon-btn big" id="mPlay" aria-label="Play">▶</button>
+        <button class="icon-btn" id="mNext" aria-label="Next">⏭</button>
+      </div>
+      <div class="d-flex align-items-center gap-2 mt-3"><span>🔈</span><input type="range" class="form-range" id="vol" min="0" max="1" step="0.05" value="0.7"><span>🔊</span></div>
+    </div>
+    <button class="btn btn-diwali w-100 mb-3" id="bAddSong">➕ Apne Songs Add Karein</button>
+    <div class="list-group" id="playlist"></div>
+    <p class="muted small mt-3" id="ambNote" hidden>Songs nahi mile, isliye soft diya-bell ambient music chal raha hai 🔔</p>
+  </div>
+</div>
+<input type="file" id="fSong" accept="audio/*" multiple hidden>
+
+<!-- ======= PHOTO VIEWER (Bootstrap modal) ======= -->
+<div class="modal fade" id="viewer" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content viewer">
+      <button type="button" class="btn-close viewer-x" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="vImg" alt="">
+      <button class="nav-btn prev" id="vPrev" aria-label="Previous">‹</button>
+      <button class="nav-btn next" id="vNext" aria-label="Next">›</button>
+      <div class="v-cap" id="vCap"></div>
+    </div>
+  </div>
+</div>
+
+<!-- toast -->
+<div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" style="z-index:3000">
+  <div id="toast" class="toast align-items-center border-0" role="status"><div class="d-flex"><div class="toast-body" id="toastBody"></div></div></div>
+</div>
+
+<audio id="aud" preload="auto"></audio>
+
+<script src="vendor/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
